@@ -627,10 +627,7 @@
     "patch": 2
   },
   "paths": [
-    "Resources/Beastiary",
-    "Campaigns/Thieve's Luts/Characters",
-    "Campaigns/ToBeNamed/Characters",
-    "Campaigns/Hearthbound Heroes/Characters"
+    "Resources/Beastiary"
   ],
   "autoParse": true,
   "disableSRD": true,
