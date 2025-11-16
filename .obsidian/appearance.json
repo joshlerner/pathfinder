@@ -1,0 +1,10 @@
+{
+  "enabledCssSnippets": [
+    "trait-style",
+    "pf2e-style",
+    "pf2e-trait",
+    "pf2e",
+    "metabind"
+  ],
+  "theme": "obsidian"
+}

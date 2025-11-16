@@ -1,0 +1,274 @@
+.theme-light .pf2e {
+	& h1 {
+		font-family: 'Century Gothic';
+		font-size: 1.8em;
+		font-variant: small-caps;
+		font-weight: normal;
+		background-color: rgb(85, 11, 6);
+		padding: 5px 5px;
+		border-radius: 5px;
+		color: rgb(201, 193, 149);
+		text-align: left;
+	}
+
+	& h1:has(.right-side) {
+		justify-content: space-between;
+		display:flex;
+		gap: 8px;
+	}
+
+	& h1 .right-side {
+		margin-left: auto;
+	}
+
+	& h2 {
+		font-family: 'Century Gothic';
+		font-size: 1.2em;
+		font-variant: small-caps;
+		font-weight: bold;
+		background-color: rgb(217, 209, 190);
+		padding: 3px 3px;
+		border-radius: 3px;
+		color: rgb(32, 32, 32);
+	}
+
+	& h3 {
+		font-family: 'Century Gothic';
+		font-variant: small-caps;
+		font-weight: bold;
+		font-size: 1em;
+		background-color: rgb(11, 36, 96);
+		padding: 2px 2px;
+		border-radius: 2px;
+		color: rgb(32, 32, 32);
+	}
+
+	& a {
+		color: rgb(32,32,32);
+		font-style: normal !important;
+		text-decoration: none !important;
+
+		&:hover {
+			text-decoration: underline !important;
+    	}
+	}
+
+	& p, ul li, ol li {
+		color: rgb(32, 32, 32);
+		font-family: 'Century Gothic';
+		font-size: 1em;
+	}
+
+	& table {
+		display: block;
+		max-height: 700px;
+		overflow-y: scroll;
+		border-collapse: collapse;
+	
+		& th {
+			font-family: 'Century Gothic';
+			background-color: rgb(78, 48, 45) !important;
+			color: rgb(201,193,149);
+			border: 1px solid rgb(218,218,218) !important;
+			vertical-align: middle;
+			position: sticky;
+			top: 0;
+		}
+
+		& td {
+			font-family: 'Century Gothic';
+			font-size: 1.1em;
+			border: 1px solid rgb(218,218,218) !important;
+			vertical-align: middle;
+		}
+	
+		& tr:nth-child(odd) {
+			background-color: rgb(51,44,27) !important;
+		}
+
+		& tr:nth-child(even) {
+			background-color: rgb(97,85,52) !important;
+		}
+	}
+	
+	& .character-header {
+		background-color: rgb(85, 11, 6);
+		margin-bottom: 1em;
+	}
+
+	& .collapse-header summary {
+		font-family: 'Century Gothic';
+		font-variant: small-caps;
+		font-weight: bold;
+		font-size: 1.2em;
+		background-color: rgb(217, 209, 190);
+		padding: 2px 2px;
+		border-radius: 2px;
+		margin: 0;
+		border-bottom: 1px solid;
+	}
+
+	& .section-header {
+		font-family: 'Century Gothic' !important;
+		font-variant: small-caps;
+		font-weight: bold;
+		font-size: 1.2em !important;
+		background-color: rgb(217, 209, 190);
+		padding: 2px 2px !important;
+		border-radius: 2px !important;
+		margin: 0 !important;
+		border-bottom: 1px solid;
+	}
+
+	& .hybrid-select {
+		margin: 0;
+		padding: 1px;
+		display: inline-block;
+	}
+}
+
+.theme-dark .pf2e {
+	& .callout[data-callout="special"] {
+		--callout-color: var(--text-normal);
+		background-color: rgb(48, 48, 48);
+		border: 2px solid;
+		padding: 5px 10px 5px 10px;
+	}
+
+	.callout-icon { display: none; }
+
+	.callout-title .callout-title-inner { 
+		font-family: 'Century Gothic'; 
+		font-size: var(--h2-size);
+		font-weight: normal; 
+	}
+
+	& h1 {
+		font-family: 'Century Gothic';
+		font-size: 1.8em;
+		font-variant: small-caps;
+		font-weight: normal;
+		background-color: rgb(78, 48, 45);
+		padding: 5px 5px;
+		border-radius: 5px;
+		color: rgb(201, 193, 149);
+		text-align: left;
+	}
+
+	& h1:has(.right-side) {
+		justify-content: space-between;
+		display:flex;
+		gap: 8px;
+	}
+
+	& h1 .right-side {
+		margin-left: auto;
+	}
+
+	& h2 {
+		font-family: 'Century Gothic';
+		font-size: 1.2em;
+		font-variant: small-caps;
+		font-weight: bold;
+		background-color: rgb(125, 111, 74);
+		padding: 3px 3px;
+		border-radius: 3px;
+		color: rgb(32, 32, 32);
+	}
+
+	& h3 {
+		font-family: 'Century Gothic';
+		font-variant: small-caps;
+		font-weight: bold;
+		font-size: 1em;
+		background-color: rgb(103, 124, 100);
+		padding: 2px 2px;
+		border-radius: 2px;
+		color: rgb(218, 218, 218);
+	}
+
+	& a {
+		color: rgb(218,218,218) !important;
+		font-style: normal !important;
+		text-decoration: none !important;
+
+		&:hover {
+			text-decoration: underline !important;
+    	}
+	}
+
+	& p, ul li, ol li {
+		color: rgb(218, 218, 218);
+		font-family: 'Century Gothic';
+		font-size: 1em;
+	}
+
+	& table {
+		display: block;
+		max-height: 700px;
+		overflow-y: scroll;
+		border-collapse: collapse;
+	
+		& th {
+			font-family: 'Century Gothic';
+			background-color: rgb(78, 48, 45) !important;
+			color: rgb(201,193,149);
+			border: 1px solid rgb(218,218,218) !important;
+			vertical-align: middle;
+			position: sticky;
+			top: 0;
+		}
+
+		& td {
+			font-family: 'Century Gothic';
+			font-size: 1.1em;
+			border: 1px solid rgb(218,218,218) !important;
+			vertical-align: middle;
+		}
+	
+		& tr:nth-child(odd) {
+			background-color: rgb(51,44,27) !important;
+		}
+
+		& tr:nth-child(even) {
+			background-color: rgb(97,85,52) !important;
+		}
+	}
+	
+	& .character-header {
+		background-color: rgb(78, 48, 45);
+		margin-bottom: 1em;
+	}
+
+	& .collapse-header summary {
+		font-family: 'Century Gothic';
+		font-variant: small-caps;
+		font-weight: bold;
+		font-size: 1.2em;
+		background-color: rgb(125, 111, 74);
+		padding: 2px 2px;
+		border-radius: 2px;
+		margin: 0;
+		border-bottom: 1px solid;
+	}
+
+	& .section-header {
+		font-family: 'Century Gothic' !important;
+		color: rgb(218, 218, 218);
+		font-weight: bold;
+		font-variant: small-caps;
+		font-size: 1.2em !important;
+		background-color: rgb(125, 111, 74);
+		padding: 2px 2px !important;
+		border-radius: 2px !important;
+		margin: 0 !important;
+		border-bottom: 1px solid;
+	}
+
+	& .hybrid-select {
+		margin: 0;
+		padding: 1px;
+		display: inline-block;
+	}
+	}
+}

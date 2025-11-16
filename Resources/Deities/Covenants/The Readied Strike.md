@@ -1,0 +1,2 @@
+`.deity`
+# The Readied Strike

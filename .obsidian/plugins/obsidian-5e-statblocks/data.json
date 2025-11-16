@@ -1,0 +1,644 @@
+{
+  "monsters": [
+    [
+      "Clockwork Serpent Spy",
+      {
+        "layout": "Basic Pathfinder 2e Layout",
+        "name": "Clockwork Serpent Spy",
+        "level": "Creature 0",
+        "size": "tiny",
+        "trait_03": "construct",
+        "modifier": 10,
+        "perception": [
+          {
+            "name": "Perception",
+            "desc": "Perception +10; low-light vision;"
+          }
+        ],
+        "abilities_top": [
+          {
+            "name": "Record Audio",
+            "desc": "⬻ The clockwork spy records all sounds within 25 feet onto a small gemstone worth 1 gp embedded in its body. The clockwork spy can record up to 1 hour of sound on a single gemstone. Once it begins recording, it can't cease recording early, nor can it record onto a gemstone that already contains a recording. Some clockwork spies contain multiple gemstones to allow for a series of recordings. Since clockwork spies are not intelligent, they must be given simple commands regarding when to start recording. A clockwork spy can differentiate between different kinds of creatures but not between specific individuals.\nThe spy can start or stop playback of recording by spending  a single action. Removing a gemstone from or installing a gemstone into a clockwork spy requires a successful DC 14 Thievery check to Disable a Device; on a failure, the gemstone is undamaged, but any recordings are erased and the gemstone can still be used to make another recording."
+          }
+        ],
+        "abilities_mid": [
+          {
+            "name": "Self-Destruct",
+            "desc": "⬲ A clockwork spy must use this reaction unless specifically programmed otherwise by its creator; __Trigger__ The clockwork spy is reduced to 0 Hit Points; __Effect__ The spy thrashes around and emits a tiny scream followed by a steady ticking sound. At the beginning of what would have been its next turn, the clockwork spy explodes, dealing 1d12 (1d12) piercing damage ina 5-foot radius (DC 17 basic Reflex save). Its gemstone is destroyed, along with any information contained inside it.\nAn adjacent creature can cancel the self-destruct sequence by succeeding at a DC 17 Thievery check to Disable a Device."
+          }
+        ],
+        "abilities_bot": [
+          {
+            "name": "Bleeding Gash",
+            "desc": "noneOn a critical hit with a sharpened gear strike, the clockwork serpent spy also inflicts 1d4 (1d4) persistent bleed damage (DC 17 Fortitude Save)"
+          }
+        ],
+        "type": "construct",
+        "subtype": "",
+        "alignment": "n",
+        "ac": 19,
+        "armorclass": [
+          {
+            "name": "AC",
+            "desc": "19; __Fort__: +3 (1d20+3); __Ref__: +9 (1d20+9); __Will__: +6 (1d20+6);"
+          }
+        ],
+        "hp": 15,
+        "health": [
+          {
+            "name": "HP",
+            "desc": "15;"
+          }
+        ],
+        "attacks": [
+          {
+            "name": "Melee",
+            "desc": "⬻  sharpened gear +7 (finesse); __Damage__  1d6 (1d6) slashing + bleeding gash"
+          }
+        ],
+        "spellcasting": [],
+        "speed": "25 feet",
+        "stats": [
+          0,
+          4,
+          0,
+          -5,
+          3,
+          0
+        ],
+        "abilityMods": [
+          0,
+          4,
+          0,
+          -5,
+          3,
+          0
+        ],
+        "damage_vulnerabilities": {
+          "value": "electricity 3, orichalcum 3",
+          "benchmark": "moderate",
+          "note": ""
+        },
+        "damage_resistances": {
+          "value": "",
+          "benchmark": "moderate",
+          "note": ""
+        },
+        "damage_immunities": "",
+        "condition_immunities": {
+          "value": "death effects, disease, doomed, drained, fatigued, healing, mental, necromancy, nonlethal attacks, paralyzed, poisoned, sickened, unconscious",
+          "benchmark": "moderate",
+          "note": ""
+        },
+        "senses": "low-light vision",
+        "cr": 0,
+        "bestiary": false,
+        "skills": [
+          {
+            "name": "Skills",
+            "desc": "__Acrobatics__: +7 (1d20+7)"
+          }
+        ],
+        "trait_04": "Clockwork",
+        "trait_05": " Mindless",
+        "traits_04": "Clockwork"
+      }
+    ]
+  ],
+  "defaultLayouts": {},
+  "layouts": [
+    {
+      "name": "Custom Pathfinder 2e Layout",
+      "blocks": [
+        {
+          "type": "inline",
+          "id": "68f84a893b68",
+          "properties": [],
+          "nested": [
+            {
+              "type": "group",
+              "id": "e8ea5b585a4a",
+              "properties": [],
+              "nested": [
+                {
+                  "type": "javascript",
+                  "id": "885abafa2b1a",
+                  "conditioned": false,
+                  "code": "const spacer = document.createElement(\"div\");\nspacer.style.paddingLeft =(2*parseInt(monster.columnWidth)/3 - 55) + \"px\";\nreturn spacer;"
+                },
+                {
+                  "type": "inline",
+                  "id": "985b286a382a",
+                  "properties": [],
+                  "nested": [
+                    {
+                      "type": "heading",
+                      "id": "797878992859",
+                      "properties": [
+                        "name"
+                      ],
+                      "size": 1,
+                      "fallback": "-",
+                      "conditioned": true
+                    },
+                    {
+                      "type": "heading",
+                      "id": "581a2b195aca",
+                      "properties": [
+                        "level"
+                      ],
+                      "size": 1,
+                      "fallback": "-",
+                      "conditioned": true
+                    }
+                  ],
+                  "cls": "character-header"
+                },
+                {
+                  "type": "inline",
+                  "id": "3a7a8af9dabb",
+                  "properties": [],
+                  "nested": [
+                    {
+                      "type": "property",
+                      "id": "fa3bf86ba83b",
+                      "properties": [
+                        "size"
+                      ],
+                      "fallback": "-",
+                      "callback": "return \"==\" + monster.size + \"==\"",
+                      "conditioned": true,
+                      "display": ""
+                    },
+                    {
+                      "type": "property",
+                      "id": "a8283b8b5b8b",
+                      "properties": [
+                        "trait_01"
+                      ],
+                      "fallback": "-",
+                      "callback": "return \"==\" + monster.trait_01 + \"==\"",
+                      "conditioned": true,
+                      "display": ""
+                    },
+                    {
+                      "type": "property",
+                      "id": "6afa3bdbca5b",
+                      "properties": [
+                        "trait_02"
+                      ],
+                      "fallback": "-",
+                      "conditioned": true,
+                      "callback": "return \"==\" + monster.trait_02 + \"==\"",
+                      "display": ""
+                    },
+                    {
+                      "type": "property",
+                      "id": "bbf99be8b968",
+                      "properties": [
+                        "trait_03"
+                      ],
+                      "fallback": "-",
+                      "display": "",
+                      "conditioned": true,
+                      "callback": "return \"==\" + monster.trait_03 + \"==\""
+                    },
+                    {
+                      "type": "property",
+                      "id": "e8b8895a093b",
+                      "properties": [
+                        "trait_04"
+                      ],
+                      "fallback": "-",
+                      "display": "",
+                      "conditioned": true,
+                      "callback": "return \"==\" + monster.trait_04 + \"==\""
+                    },
+                    {
+                      "type": "property",
+                      "id": "3b894939c83b",
+                      "properties": [
+                        "trait_05"
+                      ],
+                      "fallback": "-",
+                      "display": "",
+                      "conditioned": true,
+                      "callback": "return \"==\" + monster.trait_05 + \"==\""
+                    },
+                    {
+                      "type": "property",
+                      "id": "ba89a9ca9a2a",
+                      "properties": [
+                        "trait_06"
+                      ],
+                      "fallback": "-",
+                      "callback": "return \"==\" + monster.trait_06 + \"==\"",
+                      "display": "",
+                      "conditioned": true
+                    },
+                    {
+                      "type": "property",
+                      "id": "ebfb2b2b186a",
+                      "properties": [
+                        "trait_07"
+                      ],
+                      "fallback": "-",
+                      "display": "",
+                      "conditioned": true,
+                      "callback": "return \"==\" + monster.trait_07 + \"==\""
+                    }
+                  ],
+                  "hasRule": true
+                },
+                {
+                  "type": "group",
+                  "id": "6b9b8a68a87b",
+                  "properties": [],
+                  "nested": [
+                    {
+                      "type": "table",
+                      "id": "6868b90b2baa",
+                      "properties": [
+                        "abilityMods"
+                      ],
+                      "headers": [
+                        "STR",
+                        "DEX",
+                        "CON",
+                        "INT",
+                        "WIS",
+                        "CHA"
+                      ],
+                      "calculate": false,
+                      "fallback": "-",
+                      "conditioned": false
+                    }
+                  ],
+                  "hasRule": true
+                },
+                {
+                  "type": "inline",
+                  "id": "4a8ada699b79",
+                  "properties": [],
+                  "nested": [
+                    {
+                      "type": "group",
+                      "id": "8bab6b8b5b29",
+                      "properties": [],
+                      "nested": [
+                        {
+                          "type": "traits",
+                          "id": "d9393b6ae90b",
+                          "properties": [
+                            "perception"
+                          ],
+                          "fallback": "-",
+                          "conditioned": true
+                        },
+                        {
+                          "type": "traits",
+                          "id": "792a999ae968",
+                          "properties": [
+                            "movement"
+                          ],
+                          "fallback": "-",
+                          "conditioned": true
+                        },
+                        {
+                          "type": "traits",
+                          "id": "a9db78794adb",
+                          "properties": [
+                            "language"
+                          ],
+                          "fallback": "-",
+                          "conditioned": true
+                        }
+                      ]
+                    },
+                    {
+                      "type": "traits",
+                      "id": "0898db499bdb",
+                      "properties": [
+                        "armorclass"
+                      ],
+                      "fallback": "-",
+                      "conditioned": true
+                    }
+                  ],
+                  "hasRule": true
+                },
+                {
+                  "type": "group",
+                  "id": "4b3bcbf84a59",
+                  "properties": [],
+                  "nested": [
+                    {
+                      "type": "collapse",
+                      "id": "bb888a49ca3a",
+                      "heading": "Attacks",
+                      "hasRule": false,
+                      "conditioned": false,
+                      "nested": [
+                        {
+                          "type": "group",
+                          "id": "7878db19aa48",
+                          "properties": [],
+                          "nested": [
+                            {
+                              "type": "traits",
+                              "id": "9abb3b590a88",
+                              "properties": [
+                                "attacks"
+                              ],
+                              "fallback": "-",
+                              "conditioned": true,
+                              "heading": "",
+                              "doNotAddClass": true
+                            }
+                          ]
+                        }
+                      ],
+                      "open": true
+                    }
+                  ],
+                  "conditioned": true,
+                  "heading": "",
+                  "hasRule": true,
+                  "cls": "collapse-header"
+                },
+                {
+                  "type": "group",
+                  "id": "f8e8d9c968bb",
+                  "properties": [],
+                  "nested": [
+                    {
+                      "type": "collapse",
+                      "id": "68388bba7919",
+                      "heading": "Actions",
+                      "hasRule": false,
+                      "conditioned": false,
+                      "nested": [
+                        {
+                          "type": "group",
+                          "id": "5af80a3a3be9",
+                          "properties": [],
+                          "nested": [
+                            {
+                              "type": "traits",
+                              "id": "d8cb4808b8a8",
+                              "properties": [
+                                "actions"
+                              ],
+                              "fallback": "-",
+                              "conditioned": true,
+                              "hasRule": false,
+                              "doNotAddClass": true
+                            }
+                          ]
+                        }
+                      ],
+                      "open": true
+                    }
+                  ],
+                  "heading": "",
+                  "hasRule": true,
+                  "conditioned": true,
+                  "cls": "collapse-header"
+                },
+                {
+                  "type": "group",
+                  "id": "4ba80af8490b",
+                  "properties": [],
+                  "nested": [
+                    {
+                      "type": "ifelse",
+                      "id": "0a4afaf8faeb",
+                      "conditions": [
+                        {
+                          "nested": [
+                            {
+                              "type": "group",
+                              "id": "8809a9f99909",
+                              "properties": [],
+                              "nested": [
+                                {
+                                  "type": "collapse",
+                                  "id": "8aba38398b2b",
+                                  "heading": "Spells",
+                                  "hasRule": false,
+                                  "conditioned": false,
+                                  "nested": [
+                                    {
+                                      "type": "group",
+                                      "id": "7b2aeb3828fa",
+                                      "properties": [],
+                                      "nested": [
+                                        {
+                                          "type": "property",
+                                          "id": "eba96a58cb99",
+                                          "properties": [
+                                            "spell_attack"
+                                          ],
+                                          "fallback": "-",
+                                          "display": "Spell Attack",
+                                          "conditioned": true
+                                        },
+                                        {
+                                          "type": "property",
+                                          "id": "cb9869081a39",
+                                          "properties": [
+                                            "spell_list"
+                                          ],
+                                          "fallback": "-",
+                                          "callback": "const spell_list = monster.spell_list;\nrank_list = [];\nr = 0;\nspell_list.forEach(rank => {\n  name = rank.name;\n  const desc = [name + \" Spell\",...rank.desc];\n  if(name.includes(\"Cantrips\")) {\n    spells = rank.desc.join(\"<br>\");\n  } else {\n    name = name + \" Spells\";\n    slots = rank.slots;\n    slots_list = [];\n    for (let i = 0; i < slots; i++) {\n      slots_list.push(\"``INPUT[inlineSelect(\"+desc.map((x,j) => \"option(\" + x + \")\").join(\", \")+\"):spell_slots[\"+r+\"][\"+i+\"]]``\");\n    }\n    spells = slots_list.join(\"<br>\");\n    r = r + 1;\n  }\n  const rank_block = \"<b>\" + name + \"</b><br>\" + spells;\n  rank_list.push(rank_block);\n})\nconst spell_block = rank_list.join(\"<br>\");\nreturn spell_block;",
+                                          "conditioned": true,
+                                          "display": ""
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "open": true
+                                }
+                              ]
+                            }
+                          ],
+                          "condition": "return monster.spell_modifier > 0"
+                        }
+                      ]
+                    }
+                  ],
+                  "cls": "collapse-header",
+                  "hasRule": true,
+                  "conditioned": true
+                }
+              ]
+            },
+            {
+              "type": "group",
+              "id": "aaba991b394b",
+              "properties": [],
+              "nested": [
+                {
+                  "type": "javascript",
+                  "id": "8b2a99ea9908",
+                  "conditioned": false,
+                  "code": "const spacer = document.createElement(\"div\");\nspacer.style.paddingLeft = (parseInt(monster.columnWidth)/3 + 45) + \"px\";\nreturn spacer;"
+                },
+                {
+                  "type": "inline",
+                  "id": "7a994b0a1888",
+                  "properties": [],
+                  "nested": [
+                    {
+                      "type": "group",
+                      "id": "3b1a89d99a4a",
+                      "properties": [],
+                      "nested": [
+                        {
+                          "type": "traits",
+                          "id": "a9fa3a18080a",
+                          "properties": [
+                            "identity"
+                          ],
+                          "fallback": "-",
+                          "conditioned": true
+                        },
+                        {
+                          "type": "traits",
+                          "id": "49ea68b8ab5b",
+                          "properties": [
+                            "class_dc"
+                          ],
+                          "fallback": "-",
+                          "conditioned": true
+                        }
+                      ]
+                    },
+                    {
+                      "type": "traits",
+                      "id": "099859e8d94a",
+                      "properties": [
+                        "health"
+                      ],
+                      "fallback": "-",
+                      "conditioned": true
+                    }
+                  ],
+                  "hasRule": true
+                },
+                {
+                  "type": "group",
+                  "id": "f8aae9b90af9",
+                  "properties": [],
+                  "nested": [
+                    {
+                      "type": "collapse",
+                      "id": "09e8fa68ab5a",
+                      "heading": "Skills",
+                      "hasRule": false,
+                      "conditioned": false,
+                      "nested": [
+                        {
+                          "type": "group",
+                          "id": "6a69bbf9cb7b",
+                          "properties": [],
+                          "nested": [
+                            {
+                              "type": "traits",
+                              "id": "4b7a6b1acb89",
+                              "properties": [
+                                "skills"
+                              ],
+                              "fallback": "-",
+                              "conditioned": true,
+                              "heading": "",
+                              "doNotAddClass": true
+                            }
+                          ]
+                        }
+                      ],
+                      "open": true
+                    }
+                  ],
+                  "heading": "",
+                  "hasRule": true,
+                  "conditioned": true,
+                  "cls": "collapse-header"
+                },
+                {
+                  "type": "group",
+                  "id": "2959fb88484a",
+                  "properties": [],
+                  "nested": [
+                    {
+                      "type": "property",
+                      "id": "6939f9093a68",
+                      "properties": [
+                        "inventory"
+                      ],
+                      "fallback": "-",
+                      "display": "",
+                      "conditioned": true
+                    }
+                  ],
+                  "conditioned": true,
+                  "hasRule": true,
+                  "heading": "Inventory"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "id": "ca596a69badb",
+      "cssProperties": {
+        "primaryColor": "#dadada",
+        "backgroundColor": "#1e1e1e",
+        "ruleColor": "#c9c195",
+        "borderColor": "#522e2c",
+        "borderSize": "5px",
+        "contentFont": "\"Century Gothic\"",
+        "headingFont": "\"Century Gothic\"",
+        "headingFontWeight": "fontWeight",
+        "traitsNameFontStyle": "traitsFontStyle",
+        "contentFontSize": "14px",
+        "fontWeight": null,
+        "headingFontColor": "ruleColor",
+        "headingFontSize": "24px",
+        "barColor": "ruleColor",
+        "moonstone": {
+          "primaryColor": "#222222",
+          "backgroundColor": "#ffffff"
+        }
+      },
+      "columns": null,
+      "forceColumns": false,
+      "columnWidth": 600
+    }
+  ],
+  "default": "path-2e-block",
+  "useDice": true,
+  "renderDice": false,
+  "export": true,
+  "showAdvanced": true,
+  "version": {
+    "major": 4,
+    "minor": 10,
+    "patch": 2
+  },
+  "paths": [
+    "Resources/Beastiary",
+    "Campaigns/Thieve's Luts/Characters",
+    "Campaigns/ToBeNamed/Characters",
+    "Campaigns/Hearthbound Heroes/Characters"
+  ],
+  "autoParse": true,
+  "disableSRD": true,
+  "tryToRenderLinks": true,
+  "debug": true,
+  "notifiedOfFantasy": false,
+  "hideConditionHelp": false,
+  "alwaysImport": false,
+  "defaultLayoutsIntegrated": true,
+  "atomicWrite": false
+}

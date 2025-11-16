@@ -1,0 +1,44 @@
+.cm-s-obsidian span.cm-formatting-highlight, .cm-s-obsidian span.cm-highlight {
+	background-color: transparent;
+	color: rgb(211,197,144);
+}
+
+.markdown-preview-view mark {
+	background-color: rgb(77, 22, 10);
+	border: 1px solid rgb(211, 197, 144);
+	padding: 3px 3px;
+	margin-bottom: 4px;
+	font-size: 0.85em;
+	font-family: 'Century Gothic';
+	font-variant: small-caps;
+	font-weight: bold !important;
+	color: rgb(218, 218, 218) !important;
+	display: inline-flex;
+}
+
+.markdown-preview-view mark.size {
+	background-color: rgb(89, 139, 75);
+	color: rgb(218, 218, 218);
+}
+
+.markdown-preview-view mark.rarity-uncommon {
+	background-color: rgb(182, 93, 34);
+	color: rgb(218, 218, 218);
+}
+
+.markdown-preview-view mark.rarity-rare {
+	background-color: rgb(13, 20, 98);
+	color: rgb(218, 218, 218);
+}
+
+.markdown-preview-view mark.rarity-unique {
+	background-color: rgb(117, 20, 174);
+	color: rgb(218, 218, 218);
+}
+
+.markdown-preview-view mark a {
+	text-decoration: none !important;
+	font-weight: bold !important;
+	font-style: normal !important;
+	color: rgb(218, 218, 218) !important;
+}
